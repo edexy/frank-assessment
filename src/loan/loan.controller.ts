@@ -4,7 +4,7 @@ import { Loan } from './entities/loan.entity';
 import { LoanService } from './loan.service';
 import { LoanApplicationDto } from './entities/loan.dto';
 
-
+//endpoints(resource) naming convention not followed
 @Controller('loan')
 export class LoanController {
   constructor(private readonly loanService: LoanService) {}
