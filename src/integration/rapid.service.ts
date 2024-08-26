@@ -14,7 +14,7 @@ export class RapidService {
   constructor(private httpService: HttpService) {}
 
   async getValuation(vin: string): Promise<any> {
-    console.log("vin", vin);
+    console.log("vin", vin); //use of console.log with the logger class
     const options = {
       method: 'GET',
       url: RAPID_URL,
@@ -33,13 +33,13 @@ export class RapidService {
       );
 
       if (response && response.data) {
-        console.log("response", response);
+        console.log("response", response);  //use of console.log with the logger class
         return response.data; // Access the actual data from the response
       }
 
       return null;
     } catch (err: any) {
-      console.error(err?.data || err);
+      console.error(err?.data || err);  //use of console.log with the logger class
       this.logger.error(err);
       return null;
     }
