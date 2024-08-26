@@ -9,6 +9,7 @@ export enum LOAN_STATUS {
   REJECTED = 'rejected',
 }
 
+//no indexes for this model
 
 @Entity()
 export class Loan {
